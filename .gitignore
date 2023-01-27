@@ -2,3 +2,6 @@ server/package-lock.json
 server/node_modules
 server/dist
 server/.babelrc
+
+client/package-lock.json
+client/node_modules
