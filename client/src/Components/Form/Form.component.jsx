@@ -1,8 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Form = () => {
+    const [user, setUser] = useState({
+        name: "",
+        email: "",
+        password: "",
+        phone: ""
+    })
+    const handleChange = (e) => {
+        setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    }
+    const submit = async () => {
+        console.log(user)
+    }
     return (
-        <div className='' > Register</div >
+        <div >
+            <h2 className=' text-center font-serif'>Register</h2>
+            <form className=' w-72  flex flex-col justify-center align-middle p-5 gap-2 '>
+                <div className='w-56 flex flex-col'>
+                    <label htmlFor="name" className='text-left' > Name:</label>
+                    <input id="name" type="text" name="name" value={user.name} onChange={handleChange} className='bg-gray-100 border rounded-md' />
+                </div>
+                <div className='w-56 flex flex-col'>
+                    <label htmlFor="email" className='text-left'>Email:</label>
+                    <input id="email" type="email" name="email" value={user.email} onChange={handleChange} className='bg-gray-100 border rounded-md' />
+                </div>
+                <div className='w-56 flex flex-col'>
+                    <label htmlFor='password' className='text-left'>Password:</label>
+                    <input id='password' type="password" name="password" value={user.password} onChange={handleChange} className='bg-gray-100 border rounded-md' />
+                </div>
+                <div className='w-56 flex flex-col'>
+                    <label htmlFor='phone' className='text-left'>Phone:</label>
+                    <input id='phone' type="tel" name="Phone" pattern='[0-9]{10}' value={user.phone} onChange={handleChange} className='bg-gray-100 border rounded-md' />
+                </div>
+                <div>
+                    <button type='submit' onClick={submit} className='w-12 h-6 bg-slate-300'> Add</button>
+                </div>
+            </form>
+        </div >
     )
 }
 

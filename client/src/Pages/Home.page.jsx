@@ -1,11 +1,13 @@
 import React from 'react'
-import Form from '../Components/Form/Form.component'
+import Forms from '../Components/Form/Form.component'
 
 const Home = () => {
+
+
     return (
         <>
-            <div className='object-center w-32 h-32 bg-gray'>
-                <Form />
+            <div className='p-6 flex justify-center'>
+                <Forms />
             </div>
         </>
     )
