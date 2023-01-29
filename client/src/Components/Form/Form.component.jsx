@@ -10,7 +10,8 @@ const Form = () => {
     const handleChange = (e) => {
         setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }))
     }
-    const submit = async () => {
+    const submit = async (e) => {
+        e.preventDefault()
         console.log(user)
     }
     return (
