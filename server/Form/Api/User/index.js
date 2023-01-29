@@ -21,7 +21,7 @@ Router.post("/add", async (req, res) => {
 Router.get("/", async (req, res) => {
     try {
         const Users = await UserModel.find();
-        if(Users.l)
+        if(Users.length===0) return res.status(404).json({ failed: "No Users Found" })
         return res.status(200).json({
             message: Users.length, Users
         })

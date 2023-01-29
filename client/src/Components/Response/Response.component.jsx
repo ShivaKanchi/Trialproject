@@ -1,8 +1,12 @@
 import React from 'react'
+import Usercard from '../Usercard/Usercard.component'
 
 const Response = () => {
   return (
-    <div>Response</div>
+    <div className='bg-gray-500'>
+Response
+<Usercard/>
+    </div>
   )
 }
 

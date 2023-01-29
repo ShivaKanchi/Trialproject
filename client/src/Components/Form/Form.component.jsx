@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-
+//redux
+import {useDispatch} from 'react-redux'
+import { addUser } from '../../../../server/Form/Redux/Reducer/User/user.action'
 const Form = () => {
     const [user, setUser] = useState({
         name: "",
@@ -10,8 +12,11 @@ const Form = () => {
     const handleChange = (e) => {
         setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }))
     }
+    const dispatch = useDispatch()
     const submit = async (e) => {
         e.preventDefault()
+        await dispatch(addUser(user))
+        setUser({ name: "", email: "", password: "", phone: ""})
         console.log(user)
     }
     return (
