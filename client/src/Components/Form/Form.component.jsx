@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 //redux
 import {useDispatch} from 'react-redux'
-import { addUser } from '../Form/'
+import { addUser } from '../../Redux/Reducer/User/user.action'
 const Form = () => {
     const [user, setUser] = useState({
         name: "",
