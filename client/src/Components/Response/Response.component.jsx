@@ -6,18 +6,19 @@ import { getUsers } from '../../Redux/Reducer/User/user.action'
 import Usercard from '../Usercard/Usercard.component'
 
 const Response = () => {
-  const [users,setUsers] =useState([])
-  const dispatch=useDispatch()
+  const [users, setUsers] = useState([])
+  const dispatch = useDispatch()
 
-  useEffect(()=>{
-           dispatch(getUsers).then((data)=>{
-            setUsers(data);
-         })
-  },[])
+  useEffect(() => {
+    dispatch(getUsers);
+  }, [])
   return (
     <div className='bg-gray-500'>
-Response
-<Usercard/>
+      Response
+      <p>
+        {users}
+      </p>
+      <Usercard />
     </div>
   )
 }
