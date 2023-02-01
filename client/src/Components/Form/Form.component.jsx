@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 //redux
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addUser } from '../../Redux/Reducer/User/user.action'
 const Form = () => {
     const [user, setUser] = useState({
@@ -16,8 +16,8 @@ const Form = () => {
     const submit = async (e) => {
         e.preventDefault()
         await dispatch(addUser(user))
-        setUser({ name: "", email: "", password: "", phone: ""})
-        console.log(user)
+        setUser({ name: "", email: "", password: "", phone: "" })
+        console.log(user, "form comp")
     }
     return (
         <div >

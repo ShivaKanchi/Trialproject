@@ -20,13 +20,15 @@ export const addUser = (userData) => async (dispatch) => {
 
 export const getUsers = (userData) => async (dispatch) => {
     try {
-        const user = await axios({
+        const users = await axios({
             method: "GET",
             url: `${process.env.REACT_APP_CLIENT_URL}/user/`,
         });
-        localStorage.setItem("Trialproject", JSON.stringify({ user: user }))
-
-        return dispatch({ type: GET_USERS, payload: userData })
+        localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
+        return dispatch({
+            type: GET_USERS,
+            payload: users
+        })
     }
     catch (error) {
         return dispatch({ type: "ERROR", payload: error })
