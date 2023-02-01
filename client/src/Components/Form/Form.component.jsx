@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 //redux
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import Responsepage from '../../Pages/Response.page'
 import { addUser } from '../../Redux/Reducer/User/user.action'
 const Form = () => {
     const [user, setUser] = useState({
@@ -12,11 +14,14 @@ const Form = () => {
     const handleChange = (e) => {
         setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }))
     }
+
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const submit = async (e) => {
         e.preventDefault()
         await dispatch(addUser(user))
         setUser({ name: "", email: "", password: "", phone: "" })
+        navigate('/response')
         console.log(user, "form comp")
     }
     return (

@@ -9,12 +9,9 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Navigate to='Home' />} />
-        <Route path='/Home' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/response' element={<Responsepage />} />
       </Routes>
-      <div className="App">
-        <Home />
-      </div>
     </>
 
   );
