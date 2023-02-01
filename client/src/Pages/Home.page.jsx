@@ -8,9 +8,6 @@ const Home = () => {
             <div className='p-6 flex justify-center'>
                 <Forms />
             </div>
-            <div>
-                <Response />
-            </div>
         </>
     )
 }

@@ -10,7 +10,7 @@ const Response = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    console.log(dispatch(getUsers)).then((data) => {
+    dispatch(getUsers).then((data) => {
       setUsers(data);
     });
   }, [])
@@ -20,6 +20,9 @@ const Response = () => {
       <p>
         {users}
       </p>
+      <div>
+        <Response />
+      </div>
       <Usercard />
     </div>
   )
