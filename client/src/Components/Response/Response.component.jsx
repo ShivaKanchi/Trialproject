@@ -11,13 +11,11 @@ const Response = () => {
 
   useEffect(() => {
     dispatch(getUsers)
+    setUsers
   }, [])
   return (
     <div className='bg-gray-500'>
       Response
-      <p>
-        {users}
-      </p>
       <div>
         <Response />
       </div>

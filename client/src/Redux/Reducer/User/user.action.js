@@ -18,16 +18,17 @@ export const addUser = (userData) => async (dispatch) => {
     }
 }
 
-export const getUsers = (userData) => async (dispatch) => {
+export const getUsers = () => async (dispatch) => {
     try {
         const users = await axios({
             method: "GET",
             url: `${process.env.REACT_APP_CLIENT_URL}/user/`,
         });
         localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
+        console.log(users)
         return dispatch({
             type: GET_USERS,
-            payload: users.data.users
+            payload: users
         })
     }
     catch (error) {
