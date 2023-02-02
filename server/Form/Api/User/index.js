@@ -22,9 +22,7 @@ Router.get("/", async (req, res) => {
     try {
         const users = await UserModel.find();
         if (Users.length === 0) return res.status(404).json({ failed: "No Users Found" })
-        return res.status(200).json({
-            message: users.length, users: users
-        })
+        return res.status(200).json({ users: users })
     }
     catch (error) {
         return res.status(500).json({ error: error.message })
