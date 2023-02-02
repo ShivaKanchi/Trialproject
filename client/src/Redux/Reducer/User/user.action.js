@@ -22,13 +22,13 @@ export const getUsers = () => async (dispatch) => {
     try {
         const users = await axios({
             method: "GET",
-            url: `${process.env.REACT_APP_CLIENT_URL}/user/`,
+            url: `${process.env.REACT_APP_CLIENT_URL}/user/all`,
         });
         //  localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
         console.log(users, "From action user")
         return dispatch({
             type: GET_USERS,
-            payload: users
+            payload: users.data.users
         })
     }
     catch (error) {

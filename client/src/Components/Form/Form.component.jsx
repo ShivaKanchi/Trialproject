@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Responsepage from '../../Pages/Response.page'
-import { addUser } from '../../Redux/Reducer/User/user.action'
+import { addUser, getUsers } from '../../Redux/Reducer/User/user.action'
 const Form = () => {
     const [user, setUser] = useState({
         name: "",
@@ -20,8 +20,9 @@ const Form = () => {
     const submit = async (e) => {
         e.preventDefault()
         await dispatch(addUser(user))
+        await dispatch(getUsers())
         setUser({ name: "", email: "", password: "", phone: "" })
-        navigate('/response')
+        //navigate('/response')
         console.log(user, "form comp")
     }
     return (

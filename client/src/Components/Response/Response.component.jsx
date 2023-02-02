@@ -9,7 +9,7 @@ const Response = () => {
   const [users, setUsers] = useState([])
   const dispatch = useDispatch()
   // const getresponse = async () => {
-  //   await dispatch(getUsers()).then((data) => {
+  //   await dispatch(getUsers()).then(data => {
   //     setUsers(data)
   //   })
   //   console.log("useeffect from response", users)
