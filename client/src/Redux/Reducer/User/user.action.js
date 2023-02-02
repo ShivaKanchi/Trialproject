@@ -24,8 +24,8 @@ export const getUsers = () => async (dispatch) => {
             method: "GET",
             url: `${process.env.REACT_APP_CLIENT_URL}/user/`,
         });
-        localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
-        console.log(users)
+        //  localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
+        console.log(users, "From action user")
         return dispatch({
             type: GET_USERS,
             payload: users

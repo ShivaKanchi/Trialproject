@@ -1,17 +1,20 @@
-import { ADD_USER,GET_USERS } from "./user.type";
-const intialState={};
+import { ADD_USER, GET_USERS } from "./user.type";
+const intialState = {
+    users: [],
+    user: {}
+};
 
-const userReducer =(state=intialState,action)=>{
-    switch(action.type){
-        case ADD_USER: return{
+const userReducer = (state = intialState, action) => {
+    switch (action.type) {
+        case ADD_USER: return {
             ...state,
-            ...action.payload
+            user: action.payload
         };
-        case GET_USERS: return{
+        case GET_USERS: return {
             ...state,
-            ...action.payload
+            users: [...action.payload]
         };
-        default:return{
+        default: return {
             ...state
         }
     }
