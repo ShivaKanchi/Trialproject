@@ -10,9 +10,7 @@ const Response = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getUsers).then((data) => {
-      setUsers(data);
-    });
+    dispatch(getUsers)
   }, [])
   return (
     <div className='bg-gray-500'>

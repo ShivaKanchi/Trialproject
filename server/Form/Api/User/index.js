@@ -20,10 +20,10 @@ Router.post("/add", async (req, res) => {
 // To add User to databse from form 
 Router.get("/", async (req, res) => {
     try {
-        const Users = await UserModel.find();
-        if(Users.length===0) return res.status(404).json({ failed: "No Users Found" })
+        const users = await UserModel.find();
+        if (Users.length === 0) return res.status(404).json({ failed: "No Users Found" })
         return res.status(200).json({
-            message: Users.length, Users
+            message: users.length, users: users
         })
     }
     catch (error) {

@@ -27,7 +27,7 @@ export const getUsers = (userData) => async (dispatch) => {
         localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
         return dispatch({
             type: GET_USERS,
-            payload: users
+            payload: users.data.users
         })
     }
     catch (error) {
