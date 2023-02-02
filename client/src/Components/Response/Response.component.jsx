@@ -11,7 +11,7 @@ const Response = () => {
 
   useEffect(() => {
     dispatch(getUsers)
-    setUsers
+    console.log("useeffect from response")
   }, [])
   return (
     <div className='bg-gray-500'>
