@@ -2,6 +2,7 @@ import axios from 'axios'
 
 import { ADD_USER, GET_USERS } from "./user.type"
 
+//thunk function returns function and thunk takes dispatch as input
 export const addUser = (userData) => async (dispatch) => {
     try {
         console.log(process.env.REACT_APP_CLIENT_URL, "from axios user.action")
