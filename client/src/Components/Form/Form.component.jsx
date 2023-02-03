@@ -49,6 +49,7 @@ const Form = () => {
                     <button type='submit' onClick={submit} className='w-12 h-6 bg-slate-300'> Add</button>
                 </div>
             </form>
+
         </div >
     )
 }
