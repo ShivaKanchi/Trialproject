@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Usercard = (props) => {
-  console.log("from usercard", props)
   return (
-    <div>Usercard</div>
+    <div className='w-max h-5'>
+      {props.name ? props.name : "No name"}
+    </div>
   )
 }
 

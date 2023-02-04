@@ -22,7 +22,7 @@ const Form = () => {
         await dispatch(addUser(user))
         await dispatch(getUsers())
         setUser({ name: "", email: "", password: "", phone: "" })
-        //navigate('/response')
+        navigate('/response')
         console.log(user, "form comp")
     }
     return (
