@@ -46,7 +46,7 @@ const Form = () => {
                     <input id='phone' type="tel" name="Phone" pattern='[0-9]{10}' value={user.phone} onChange={handleChange} className='bg-gray-100 border rounded-md' />
                 </div>
                 <div>
-                    <button type='submit' onClick={submit} className='w-12 h-6 bg-slate-300'> Add</button>
+                    <button type='submit' onClick={submit} className='w-12 h-6 align-middle bg-slate-300'> Add</button>
                 </div>
             </form>
 
