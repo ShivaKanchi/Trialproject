@@ -45,9 +45,16 @@ const Form = () => {
                     <label htmlFor='phone' className='text-left'>Phone:</label>
                     <input id='phone' type="tel" name="Phone" pattern='[0-9]{10}' value={user.phone} onChange={handleChange} className='bg-gray-100 border rounded-md' />
                 </div>
-                <div>
-                    <button type='submit' onClick={submit} className='w-12 h-6 align-middle bg-slate-300'> Add</button>
+
+                <div className='flex flex-row justify-between'>
+                    <div>
+                        <button type='submit' onClick={submit} className='p-1 h-6 align-middle bg-slate-300'> Add</button>
+                    </div>
+                    <div>
+                        <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/response') }}>Responses</button>
+                    </div>
                 </div>
+
             </form>
 
         </div >
