@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { ADD_USER, GET_USERS } from "./user.type"
+import { ADD_USER, GET_USERS, SEARCH_USER, DELETE_USER, UPDATE_USER } from "./user.type"
 
 //thunk function returns function and thunk takes dispatch as input
 export const addUser = (userData) => async (dispatch) => {
