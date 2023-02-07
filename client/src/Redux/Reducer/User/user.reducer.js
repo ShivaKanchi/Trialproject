@@ -1,4 +1,4 @@
-import { ADD_USER, GET_USERS } from "./user.type";
+import { ADD_USER, GET_USERS, SEARCH_USER, DELETE_USER, UPDATE_USER } from "./user.type";
 const intialState = {
     users: [],
     user: {}
