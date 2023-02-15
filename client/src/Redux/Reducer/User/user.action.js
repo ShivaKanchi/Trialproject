@@ -5,7 +5,6 @@ import { ADD_USER, GET_USERS, SEARCH_USER, DELETE_USER, UPDATE_USER } from "./us
 //thunk function returns function and thunk takes dispatch as input
 export const addUser = (userData) => async (dispatch) => {
     try {
-        console.log(process.env.REACT_APP_CLIENT_URL, "from axios user.action")
         const user = await axios({
             method: "POST",
             url: `${process.env.REACT_APP_CLIENT_URL}/user/add`,
