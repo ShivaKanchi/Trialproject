@@ -25,10 +25,10 @@ export const getUsers = () => async (dispatch) => {
             url: `${process.env.REACT_APP_CLIENT_URL}/user/all`,
         });
         //localStorage.setItem("Trialproject", JSON.stringify({ users: users }))
-        // console.log(users, "From action user")
+        console.log( "From action user",users.data.data)
         return dispatch({
             type: GET_USERS,
-            payload: users.data.users
+            payload: users.data.data
         })
     }
     catch (error) {
