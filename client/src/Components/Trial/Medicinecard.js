@@ -7,7 +7,7 @@ import {
     Button,
     Flex,
 } from '@chakra-ui/react';
-import medimg from './Medicines/med1.jpg';
+// import medimg from './Medicines/med1.jpg';
 const medicines = [
     {
         "MedName": "Dolo 650",
@@ -51,7 +51,7 @@ export default function Medicinecard() {
                         <Image
                             h={'200px'}
                             w={'full'}
-                            src={`${medimg}`}
+                            src={`https://images.newscientist.com/wp-content/uploads/2019/06/18153152/medicineshutterstock_1421041688.jpg`}
                             objectFit={'cover'}
                         />
                         <Box p={8}>

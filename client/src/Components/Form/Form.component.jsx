@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Responsepage from '../../Pages/Response.page'
 import { addUser, getUsers } from '../../Redux/Reducer/User/user.action'
+import Medicinecard from '../Trial/Medicinecard'
 const Form = () => {
     const [user, setUser] = useState({
         name: "",
@@ -56,7 +57,9 @@ const Form = () => {
                 </div>
 
             </form>
-
+            <div>
+                <Medicinecard />
+            </div>
         </div >
     )
 }
