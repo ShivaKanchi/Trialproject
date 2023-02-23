@@ -13,7 +13,7 @@ function App() {
         <Route path='/' element={<Navigate to='/home' />} />
         <Route path='/home' element={<Home />} />
         <Route path='/response' element={<Responsepage />} />
-        <Route path='/mappoint' element={isLoaded ? <MapPointpage /> : null} />
+        <Route path='/mappoint' element={<MapPointpage />} />
       </Routes>
     </>
 

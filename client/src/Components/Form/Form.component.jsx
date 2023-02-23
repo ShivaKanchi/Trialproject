@@ -29,7 +29,7 @@ const Form = () => {
         <div >
             <h2 className=' text-center font-serif'>Register</h2>
             <form className=' w-72  flex flex-col justify-center align-middle p-5 gap-2 '>
-              
+
                 <div className='w-56 flex flex-col'>
                     <label htmlFor="name" className='text-left' > Name:</label>
                     <input id="name" type="text" name="name" value={user.name} onChange={handleChange} className='bg-gray-100 border rounded-md' />
@@ -56,6 +56,9 @@ const Form = () => {
                     </div>
                     <div>
                         <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/response') }}>Responses</button>
+                    </div>
+                    <div>
+                        <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/mappoint') }}>MapView</button>
                     </div>
                 </div>
 

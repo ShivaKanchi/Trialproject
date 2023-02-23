@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 //import { useState } from 'react';
 
 const MapPoint = (props) => {
-    const position = props.mapLocation
+    const position = [19.203202, 72.848688]
     return (
         <>
             <div className="w-full h-48">
