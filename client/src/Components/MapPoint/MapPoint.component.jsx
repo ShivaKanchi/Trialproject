@@ -1,63 +1,31 @@
-import React, { useState } from "react";
-import { GoogleMap, InfoWindow, Marker } from "@react-google-maps/api";
+import React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+//import { useSelector } from 'react-redux';
+//import { useState } from 'react';
 
-const markers = [
-    {
-        id: 1,
-        name: "Chicago, Illinois",
-        position: { lat: 41.881832, lng: -87.623177 }
-    },
-    {
-        id: 2,
-        name: "Denver, Colorado",
-        position: { lat: 39.739235, lng: -104.99025 }
-    },
-    {
-        id: 3,
-        name: "Los Angeles, California",
-        position: { lat: 34.052235, lng: -118.243683 }
-    },
-    {
-        id: 4,
-        name: "New York, New York",
-        position: { lat: 40.712776, lng: -74.005974 }
-    }
-];
-
-function MapPoint() {
-    const [activeMarker, setActiveMarker] = useState(null);
-    const handleActiveMarker = (marker) => {
-        if (marker === activeMarker) {
-            return;
-        }
-        setActiveMarker(marker);
-    };
-    const handleOnLoad = (map) => {
-        const bounds = new google.maps.LatLngBounds();
-        markers.forEach(({ position }) => bounds.extend(position));
-        map.fitBounds(bounds);
-    };
+const MapPoint = (props) => {
+    const position = props.mapLocation
     return (
-        <GoogleMap
-            onLoad={handleOnLoad}
-            onClick={() => setActiveMarker(null)}
-            mapContainerStyle={{ width: "100vw", height: "100vh" }}
-        >
-            {markers.map(({ id, name, position }) => (
-                <Marker
-                    key={id}
-                    position={position}
-                    onClick={() => handleActiveMarker(id)}
+        <>
+            <div className="w-full h-48">
+                <MapContainer
+                    center={position}
+                    zoom={13}
+                    scrollWheelZoom={false}
+                    className="h-full"
                 >
-                    {activeMarker === id ? (
-                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                            <div>{name}</div>
-                        </InfoWindow>
-                    ) : null}
-                </Marker>
-            ))}
-        </GoogleMap>
-    );
+                    <TileLayer
+                        attribution='<a href="https://www.openstreetmap.org/copyright">OSM</a>'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+
+                    />
+                    <Marker position={position}>
+                        <Popup>{props.title}</Popup>
+                    </Marker>
+                </MapContainer>
+            </div>
+        </>
+    )
 }
 
-export default MapPoint;
+export default MapPoint
