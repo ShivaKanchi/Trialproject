@@ -54,6 +54,7 @@ const Form = () => {
                     <div>
                         <button type='submit' onClick={submit} className='p-1 h-6 align-middle bg-slate-300'> Add</button>
                     </div>
+                </div >
             </form>
             <div>
                 <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/response') }}>Responses</button>
@@ -63,7 +64,7 @@ const Form = () => {
             </div>
         </div>
 
-        </div >
+
     )
 }
 
