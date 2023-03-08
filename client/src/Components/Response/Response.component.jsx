@@ -36,8 +36,9 @@ const Response = () => {
             <Usercard {...user} key={user._id} />
           ))
         }
+        <Pagination postPerPage={postsPerPage} totalPosts={users.length} />
+
       </div>
-      <Pagination postPerPage={postsPerPage} totalPosts={users.length} />
     </div>
   )
 }
