@@ -9,7 +9,7 @@ import Usercard from '../Usercard/Usercard.component'
 const Response = () => {
   const [users, setUsers] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage, setPostsPerPage] = useState(5)
+  const [cardsPerPage] = useState(5)
 
   const dispatch = useDispatch()
   const getresponse = async () => {
@@ -20,9 +20,12 @@ const Response = () => {
     setUsers(usersdata)
   }, [usersdata])
   //Get current pots
-  const indexOfLastPost = currentPage * postsPerPage;                    // 1*5=5  
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;               // 5-5=0
-  const currentPosts = users.slice(indexOfFirstPost, indexOfLastPost)    // 
+  const indexOfLastCard = currentPage * cardsPerPage;                    // 1*5=5  
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;               // 5-5=0
+  const currentPosts = users.slice(indexOfFirstCard, indexOfLastCard)    // 
+  //Change page
+  const paginate = (pageNumber) => { setCurrentPage(pageNumber) }
+
   // console.log(currentPosts, users)
   return (
     <div className='p-5 flex flex-col justify-center '>
@@ -36,9 +39,8 @@ const Response = () => {
             <Usercard {...user} key={user._id} />
           ))
         }
-        <Pagination postPerPage={postsPerPage} totalPosts={users.length} />
-
       </div>
+      <Pagination postPerPage={cardsPerPage} totalPosts={users.length} paginate={paginate} currentPage={currentPage} />
     </div>
   )
 }

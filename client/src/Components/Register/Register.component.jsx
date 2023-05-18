@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 //redux
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import Responsepage from '../../Pages/Response.page'
 import { addUser, getUsers } from '../../Redux/Reducer/User/user.action'
-const Form = () => {
+const Register = () => {
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -25,10 +24,11 @@ const Form = () => {
         navigate('/response')
         console.log(user, "form comp")
     }
+
     return (
-        <div >
-            <h2 className=' text-center font-serif'>Register</h2>
-            <form className=' w-72  flex flex-col justify-center align-middle p-5 gap-2 '>
+        <div className='bg-slate-400 flex flex-col items-center justify-center p-5'>
+            <h2 className=' font-serif'>Register</h2>
+            <form className=' w-72  flex flex-col justify-center items-center p-5 gap-2 '>
 
                 <div className='w-56 flex flex-col'>
                     <label htmlFor="name" className='text-left' > Name:</label>
@@ -52,20 +52,14 @@ const Form = () => {
 
                 <div className='flex flex-row justify-between'>
                     <div>
-                        <button type='submit' onClick={submit} className='p-1 h-6 align-middle bg-slate-300'> Add</button>
+                        <button type='submit' onClick={submit} className='p-2 w-auto h-auto rounded-xl bg-slate-300'> Add</button>
                     </div>
                 </div >
             </form>
-            <div>
-                <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/response') }}>Responses</button>
-            </div>
-            <div>
-                <button className='p-1 h-6 align-middle bg-slate-300' onClick={() => { navigate('/mappoint') }}>MapView</button>
-            </div>
         </div>
 
 
     )
 }
 
-export default Form
+export default Register
