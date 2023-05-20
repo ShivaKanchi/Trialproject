@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     return (
-        <div className='bg-slate-400 flex flex-col items-center justify-center p-5'>
+        <div className='bg-[linear-gradient(106.23deg,black_-90%,transparent_70%),linear-gradient(247deg,red_-90%,transparent_70%)] flex flex-col items-center justify-center p-5'>
             <h2 className=' font-serif'>Register</h2>
             <form className=' w-72  flex flex-col justify-center items-center p-5 gap-2 '>
 
