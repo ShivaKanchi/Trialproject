@@ -76,11 +76,11 @@ const FileManger = () => {
         setExplorer(finaltree)
     }
     return (
-        <div className='w-[40%]'>
+        <div className='w-[40%] m-5'>
             <h1>
                 File Manager
             </h1>
-            <div>
+            <div className='my-5 border'>
                 <FileFolder data={explorer} handleInsertNode={handleInsertNode} />
             </div>
         </div>
