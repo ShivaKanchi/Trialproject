@@ -5,6 +5,7 @@ import Home from './Pages/Home.page';
 import MapGet from './Components/Map/MapGet';
 import Response from './Components/Response/Response.component';
 import Register from './Components/Register/Register.component';
+import FileManger from './Components/FileManager/FileManger';
 
 
 
@@ -29,7 +30,7 @@ function App() {
         <Route path='/form' element={<Register />} />
         <Route path='/response' element={<Response />} />
         <Route path='/mappoint' element={<MapGet />} />
-
+        <Route path='/filemanager' element={<FileManger />} />
       </Routes>
 
 

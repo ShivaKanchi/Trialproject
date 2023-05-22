@@ -19,7 +19,9 @@ const Home = () => {
         {
             name: "MapView", link: "/mappoint"
         },
-
+        {
+            name: "FileManager", link: "/filemanager"
+        },
     ]
     return (
         <>
