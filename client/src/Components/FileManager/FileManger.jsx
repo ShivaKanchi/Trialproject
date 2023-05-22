@@ -1,93 +1,89 @@
 import React from 'react'
 import { useState } from 'react'
+import FileFolder from './FileFolder'
+import useTraverseTree from './Hooks/use-traverse-tree'
 
 
 // const [newfilefolder, setNewfilefolder] = useState(false)
 
 // type 0 = folder , type 1 = file
-const filesandfolders = [
-    {
-        type: 0,
-        name: 'Study',
-        count: '2',
-        contains: [
-            {
-                type: 0,
-                name: 'DBM',
-                count: '0',
-                contains: [
-                ],
-            }, {
-                type: 1,
-                name: 'resume',
-                count: '0',
-                contains: [],
-            }
-
-        ],
-    }
-]
-
-const FileFolder = (data) => {
-    console.log(data)
-    return (
-        <div className='flex flex-col'>
-
-            <div className='border p-2 flex felx-row items-center justify-between w-60'>
+const filesandfolders =
+{
+    id: 1,
+    isFolder: true,
+    name: 'Root',
+    count: '2',
+    items: [
+        {
+            id: 2,
+            isFolder: false,
+            name: 'DBM.txt',
+            count: '0',
+            items: [],
+        },
+        {
+            id: 3,
+            isFolder: false,
+            name: 'resume.doc',
+            count: '0',
+            items: [],
+        },
+        {
+            id: 4,
+            isFolder: false,
+            name: 'imp.doc',
+            count: '0',
+            items: [],
+        },
+        {
+            id: 5,
+            isFolder: false,
+            name: 'imp.doc',
+            count: '0',
+            items: [],
+        },
+        {
+            id: 6,
+            isFolder: true,
+            name: 'study',
+            count: '2',
+            items: [
                 {
-                    data.type === 0 ? (
-                        <h1>📁</h1>
-                    ) : (
-                        <h1>📄</h1>
-                    )
+                    id: 7,
+                    isFolder: false,
+                    name: 'dsa.txt',
+                    count: '0',
+                    items: [],
+                }, {
+                    id: 8,
+                    isFolder: false,
+                    name: 'aadhar.doc',
+                    count: '0',
+                    items: [],
                 }
-                <h1>{data.name}</h1>
-                <div className='flex flex-row cursor-pointer'>
-                    +
-                    <div className='hidden'>
-                        <div>
-                            +📁
-                        </div>
-                        <div>
-                            +📄
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* {
-                data?.contains?.length === 0 ? (<></>) : (
-                    <>
-                        {data.contains.map((data) => (
-                            <FileFolder data={data} />
-                        ))}
 
-                    </>
-                )
-            } */}
-        </div>
-    )
-
-
+            ],
+        },
+    ],
 }
 
-
 const FileManger = () => {
+
+    const [explorer, setExplorer] = useState(filesandfolders)
+    const { insertNode } = useTraverseTree();
+    const handleInsertNode = (folderId, item, isFolder) => {
+        const finaltree = insertNode(explorer, folderId, item, isFolder)
+        setExplorer(finaltree)
+    }
     return (
-
-        <div className='m-10'>
-
-            <h1 className='my-5'>FileManger</h1>
-            {
-
-                filesandfolders.map((data) => (
-                    <FileFolder data={data} key={data.name} />
-                )
-                )
-
-            }
-
+        <div className='w-[40%]'>
+            <h1>
+                File Manager
+            </h1>
+            <div>
+                <FileFolder data={explorer} handleInsertNode={handleInsertNode} />
+            </div>
         </div>
-
     )
 }
 
