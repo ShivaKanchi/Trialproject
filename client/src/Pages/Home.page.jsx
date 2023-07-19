@@ -35,7 +35,7 @@ const Home = () => {
                 <div className='flex flex-col items-center'>
                     <div style={styles} className=' lg:w-[50%] p-6 m-5 flex flex-wrap gap-2 items-center justify-center bg-gray-200 rounded-md '>
                         {
-                            pagebuttons.map((data, index) => <button id='mainbuttons' key={index} className=' px-3 h-auto w-auto  text-[#fff] font-mono rounded-md border-[0.3px] hover:scale-105 bg-gradient-to-t to-[#fff0] from-black' onClick={() => { navigate(data.link) }}>{data.name}</button>
+                            pagebuttons.map((data, index) => <button id='mainbuttons' key={index} className=' px-3 h-auto w-auto  text-[white] font-mono rounded-md border-[0.3px] hover:scale-105 bg-gradient-to-t to-[#fff0] from-black' onClick={() => { navigate(data.link) }}>{data.name}</button>
                             )
                         }
                     </div>
