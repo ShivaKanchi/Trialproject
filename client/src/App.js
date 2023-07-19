@@ -33,7 +33,7 @@ function App() {
         <Route path='/response' element={<Response />} />
         <Route path='/mappoint' element={<MapGet />} />
         <Route path='/filemanager' element={<FileManger />} />
-        <Route path='/animation' element={<Animation />} />
+        {/* <Route path='/animation' element={<Animation />} /> */}
         <Route path='/hoveranimation' element={<HoverAnimation />} />
 
       </Routes>
