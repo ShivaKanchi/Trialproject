@@ -154,3 +154,35 @@
 .box5:hover::after {
     height: 100%;
 }
+
+/* -------------------------------------------- */
+.box5 {
+    background: transparent;
+    position: relative;
+}
+
+.box5::after,
+.box5::before {
+    position: absolute;
+    content: "";
+    background: black;
+    width: 1px;
+    height: 0%;
+    transition: height .3s ease-in-out;
+}
+
+.box5::before {
+    top: 0;
+    right: 0;
+}
+
+.box5::after {
+    bottom: 0;
+    left: 0;
+}
+
+
+.box5:hover::before,
+.box5:hover::after {
+    height: 100%;
+}
