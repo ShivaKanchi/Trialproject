@@ -22,9 +22,9 @@ const Home = () => {
         {
             name: "FileManager", link: "/filemanager"
         },
-        // {
-        //     name: "Animation", link: "/animation"
-        // },
+        {
+            name: "Animation", link: "/animation"
+        },
         {
             name: "Hover Animation", link: "/hoveranimation"
         },
