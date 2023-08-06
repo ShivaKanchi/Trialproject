@@ -3,7 +3,7 @@ import './TextHover.css'
 const TextHover = () => {
     const word = "hello  everyone  how  are  you  fine  sank  you".split("");
 
-    const letterElements = document.querySelectorAll('.animatedletter>  span');
+    const letterElements = document.querySelectorAll('.animatedletter>span');
 
     letterElements.forEach(letterElement => {
         letterElement.addEventListener('mouseenter', () => {
@@ -23,7 +23,7 @@ const TextHover = () => {
             <div className='font-extrabold text-center'>TextHover</div>
             <div className='animatedletter'>
                 {
-                    word.map((letter) => (<span color='red' className='letter'>{letter}</span>))
+                    word.map((letter, idx) => (<span key={idx} color='red' className='letter'>{letter}</span>))
                 }
 
             </div>
