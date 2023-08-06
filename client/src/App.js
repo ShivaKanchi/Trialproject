@@ -7,7 +7,7 @@ import Response from './Components/Response/Response.component';
 import Register from './Components/Register/Register.component';
 import FileManger from './Components/FileManager/FileManger';
 // import Animation from './Components/Animations/Animation';
-import HoverAnimation from './Components/Animations/HoverAnimation/HoverAnimation/HoverAnimation/HoverAnimation';
+import HoverAnimation from './Components/Animations/HoverAnimation';
 
 
 
