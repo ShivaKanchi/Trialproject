@@ -18,8 +18,13 @@ function App() {
     <>
 
       <div className='flex justify-center p-3'  >
-        <button className='px-5 w-auto flex flex-row gap-5  font-extrabold text-3xl font-mono border rounded-md border-black ' onClick={() => { navigate('/') }}>
+        <button className='px-5 w-auto flex flex-row gap-5  font-extrabold text-3xl font-mono border rounded-md border-black  justify-between' onClick={() => { navigate('/') }}>
           <h1 className='bg-gradient-to-b from-[#d40e0e] to-[#000000] text-transparent bg-clip-text'>T r i a l    P r o j e c t</h1>
+          <div id='navbar' className='flex gap-1 justify-center items-center flex-row'>
+            <a > Home </a>
+            <a> About </a>
+            <a> Contact </a>
+          </div>
         </button >
       </div>
 

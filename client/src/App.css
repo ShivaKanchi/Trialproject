@@ -45,3 +45,9 @@
   object-fit: contain;
   mix-blend-mode: color-burn;
 }
+
+#navbar {
+  a {
+    text-decoration: none;
+  }
+}
