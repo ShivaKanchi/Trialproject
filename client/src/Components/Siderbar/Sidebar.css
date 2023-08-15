@@ -1,0 +1,10 @@
+#mainbuttons:hover {
+    transition: background-color .5s ease-in-out;
+    background: linear-gradient(black 10%, rgb(235, 8, 8));
+}
+
+#sidebar {
+    position: relative;
+    left: 0;
+    top: 0;
+}

@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,6 +39,9 @@
   }
 }
 
+#main {
+  position: relative;
+}
 
 .logos img {
   width: 15%;
@@ -46,8 +50,41 @@
   mix-blend-mode: color-burn;
 }
 
+#logocontainer {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#logowrapper {
+  width: 50px;
+}
+
 #navbar {
-  a {
-    text-decoration: none;
-  }
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+#navbar a {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+#navbar :after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0;
+  opacity: 0;
+  border: 1px solid #333;
+  height: 1px;
+}
+
+#navbar a:hover:after {
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  width: 100%;
 }

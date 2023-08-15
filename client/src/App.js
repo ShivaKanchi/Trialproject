@@ -8,7 +8,9 @@ import Register from './Components/Register/Register.component';
 import FileManger from './Components/FileManager/FileManger';
 import Animation from './Components/Animations/Animation';
 import HoverAnimation from './Components/Animations/HoverAnimation/HoverAnimation';
-
+//logo
+import logo from './assests/logo_tp.svg';
+import Sidebar from './Components/Siderbar/Sidebar';
 
 
 function App() {
@@ -17,15 +19,18 @@ function App() {
   return (
     <>
 
-      <div className='flex justify-center p-3'  >
-        <button className='px-5 w-auto flex flex-row gap-5  font-extrabold text-3xl font-mono border rounded-md border-black  justify-between' onClick={() => { navigate('/') }}>
-          <h1 className='bg-gradient-to-b from-[#d40e0e] to-[#000000] text-transparent bg-clip-text'>T r i a l    P r o j e c t</h1>
-          <div id='navbar' className='flex gap-1 justify-center items-center flex-row'>
-            <a > Home </a>
-            <a> About </a>
-            <a> Contact </a>
+      <div id='main'  >
+        <div className='px-5 py-3 w-full flex flex-row gap-5 justify-between items-center bg-red-400' onClick={() => { navigate('/') }}>
+          <div id='logocontainer'>
+            <div id='logowrapper'> <img src={logo} alt='logo' /></div>
           </div>
-        </button >
+          <div id='navbar' className='flex gap-4 justify-center items-center flex-row font-normal text-3xl'>
+            <a href='/'> Home </a>
+            <a href='https://www.linkedin.com/in/shiva-kanchi-17888019b' target='_blank'> About </a>
+            <a href='https://shivakanchi.netlify.app/contact' target='_blank'> Contact </a>
+          </div>
+        </div >
+        <Sidebar />
       </div>
 
       <Routes>
