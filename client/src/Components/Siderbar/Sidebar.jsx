@@ -34,10 +34,10 @@ const Sidebar = () => {
 
     return (
         <div id='sidebar'>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center relative left-0 top-0 w-20 bottom-0 h-full'>
                 <div style={styles} className=' flex flex-wrap flex-col gap-2 items-center justify-center'>
                     {
-                        pagebuttons.map((data, index) => <button id='mainbuttons' key={index} className=' px-3 h-auto w-auto  text-[white] font-mono rounded-md border-[0.3px] hover:scale-105 bg-gradient-to-t to-[#fff0] from-black' onClick={() => { navigate(data.link) }}>{data.name}</button>
+                        pagebuttons.map((data, index) => <button id='mainbuttons' key={index} className='  text-[white] font-mono rounded-md border-[0.3px] hover:scale-105 bg-gradient-to-t to-[#fff0] from-black' onClick={() => { navigate(data.link) }}>{data.name}</button>
                         )
                     }
                 </div>
