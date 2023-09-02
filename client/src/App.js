@@ -20,7 +20,7 @@ function App() {
     <>
 
       <div id='main'  >
-        <div className='px-5 py-3 w-full flex flex-row gap-5 justify-between items-center bg-red-400' onClick={() => { navigate('/') }}>
+        <div className='px-6 py-1 w-full flex flex-row gap-5 justify-between items-center bg-slate-500' onClick={() => { navigate('/') }}>
           <div id='logocontainer'>
             <div id='logowrapper'> <img src={logo} alt='logo' /></div>
           </div>
