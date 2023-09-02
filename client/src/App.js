@@ -20,11 +20,11 @@ function App() {
     <>
 
       <div id='main'  >
-        <div className='px-6 py-1 w-full flex flex-row gap-5 justify-between items-center bg-slate-500' onClick={() => { navigate('/') }}>
+        <div className='px-10 w-full flex flex-row gap-5 justify-between items-center bg-slate-500' onClick={() => { navigate('/') }}>
           <div id='logocontainer'>
             <div id='logowrapper'> <img src={logo} alt='logo' /></div>
           </div>
-          <div id='navbar' className='flex gap-4 justify-center items-center flex-row font-normal text-3xl'>
+          <div id='navbar' className='flex gap-4 justify-center items-center flex-row font-normal text-xl'>
             <a href='/'> Home </a>
             <a href='https://www.linkedin.com/in/shiva-kanchi-17888019b' target='_blank'> About </a>
             <a href='https://shivakanchi.netlify.app/contact' target='_blank'> Contact </a>
