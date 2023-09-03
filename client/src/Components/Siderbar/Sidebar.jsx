@@ -42,6 +42,10 @@ const Sidebar = () => {
       name: "Hover Animation",
       link: "/hoveranimation",
     },
+    {
+      name: "Carousel",
+      link: "/carousel",
+    },
   ];
 
   return (
