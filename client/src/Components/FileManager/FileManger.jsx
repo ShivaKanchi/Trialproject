@@ -76,7 +76,7 @@ const FileManger = () => {
         setExplorer(finaltree)
     }
     return (
-        <div className='w-[80vh] m-5'>
+        <div className='w-[50%] m-5'>
             <h1>
                 File Manager
             </h1>
