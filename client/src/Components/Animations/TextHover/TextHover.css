@@ -7,7 +7,7 @@
 }
 
 .bounce {
-    color: red;
+    /* color: red; */
     animation-name: bounce;
     animation-duration: 1s;
     animation-timing-function: linear;
