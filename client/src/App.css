@@ -43,23 +43,18 @@
   position: relative;
 }
 
-.logos img {
-  width: 15%;
-  aspect-ratio: 4/3;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
-}
 
 #logocontainer {
   display: flex;
   flex-direction: row;
-
 }
 
 #logowrapper {
   width: 50px;
 }
-
+#logowrapper img{
+ cursor: pointer;
+}
 #navbar {
   display: flex;
   gap: 5px;
