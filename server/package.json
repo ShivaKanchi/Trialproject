@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel index.js -d dist",
     "start": "npm run build && node dist/index.js",
-    "dev": "nodemon --exec babel-node index.js"
+    "dev": "nodemon --exec babel-node index.js",
+    "production": "node dist/index.js"
   },
   "author": "shivakanchi",
   "license": "ISC",
