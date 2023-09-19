@@ -20,7 +20,6 @@ Router.post("/add", async (req, res) => {
 Router.get("/all", async (req, res) => {
   try {
     const newUser = await UserModel.find();
-    console.log(UserModel);
     return res.status(200).json({
       data: newUser,
     });
