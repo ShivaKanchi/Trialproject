@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import "./Sidebar.css";
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -60,7 +59,7 @@ const Sidebar = () => {
               style={buttonstyles}
               id="mainbuttons"
               key={index}
-              className=" w-full font-mono rounded-md  "
+              className=" w-full font-mono rounded-md "
               onClick={() => {
                 navigate(data.link);
               }}

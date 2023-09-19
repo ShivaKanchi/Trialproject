@@ -1,0 +1,35 @@
+.headingTitle{
+padding: 10px 0;
+    animation: SlideDownWords 1s normal;
+}
+.hellogif{
+animation: SlideUpGif 1s normal;
+z-index: 99;
+pointer-events: none;
+user-select: auto;
+}
+ 
+
+@keyframes SlideUpGif {
+    from {
+      transform: translateY(200px);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+}
+
+@keyframes SlideDownWords {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+

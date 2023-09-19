@@ -15,52 +15,9 @@ const filesandfolders = {
     {
       id: 2,
       isFolder: false,
-      name: "DBM.txt",
+      name: "createFile.doc",
       count: "0",
       items: [],
-    },
-    {
-      id: 3,
-      isFolder: false,
-      name: "resume.doc",
-      count: "0",
-      items: [],
-    },
-    {
-      id: 4,
-      isFolder: false,
-      name: "imp.doc",
-      count: "0",
-      items: [],
-    },
-    {
-      id: 5,
-      isFolder: false,
-      name: "imp.doc",
-      count: "0",
-      items: [],
-    },
-    {
-      id: 6,
-      isFolder: true,
-      name: "study",
-      count: "2",
-      items: [
-        {
-          id: 7,
-          isFolder: false,
-          name: "dsa.txt",
-          count: "0",
-          items: [],
-        },
-        {
-          id: 8,
-          isFolder: false,
-          name: "aadhar.doc",
-          count: "0",
-          items: [],
-        },
-      ],
     },
   ],
 };

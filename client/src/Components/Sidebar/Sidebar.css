@@ -12,7 +12,9 @@
 #mainbuttons{
     position: relative;
     color: black;
-    z-index: 999;
+    z-index: 1; 
+    animation: falldown 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
 }
 #mainbuttons:hover{
     color:white;
@@ -35,4 +37,14 @@
     height: 100%;
     opacity: 1;
     transition: all .2s ease-in-out;
+}
+
+@keyframes falldown {
+    from {
+      transform: translateY(-5px);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
 }
