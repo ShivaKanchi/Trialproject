@@ -21,4 +21,22 @@ Router.get("/hello", async (req, res) => {
   }
 });
 
+Router.get(`/okay/:secret`, async (req, res) => {
+  try {
+    if (req.params["secret"] === process.env.CHECK_URL) {
+      const allChecks = await CheckModel.find();
+      return res.status(200).json({
+        param: req.params,
+        data: allChecks,
+      });
+    } else {
+      return res.status(500).json({
+        message: "You cant access this Api",
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+});
+
 export default Router;
