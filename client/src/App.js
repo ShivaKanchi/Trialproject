@@ -17,8 +17,9 @@ import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   useEffect(() => {
-    axios.get(`${REACT_APP_CLIENT_URL}/check/hello`);
+    axios.get(`${process.env.REACT_APP_CLIENT_URL}/check/hello`);
   }, []);
+
   return (
     <>
       <div id="main">
