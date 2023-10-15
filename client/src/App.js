@@ -18,6 +18,7 @@ import Navbar from "./Components/Navbar/Navbar";
 function App() {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_CLIENT_URL}/check/hello`);
+    console.log("Hello");
   }, []);
 
   return (
