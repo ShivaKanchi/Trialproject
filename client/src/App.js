@@ -1,5 +1,7 @@
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 
 //pages
 import Home from "./Pages/Home.page";
@@ -14,6 +16,9 @@ import Carousel from "./Components/Carousel/Carousel";
 import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
+  useEffect(() => {
+    axios.get(`${REACT_APP_CLIENT_URL}/check/hello`);
+  }, []);
   return (
     <>
       <div id="main">
