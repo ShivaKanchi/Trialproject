@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
 //Routes
 import User from "./Api/User";
 app.use("/user", User);
+//Routes
+import Check from "./Api/Check";
+app.use("/check", Check);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
