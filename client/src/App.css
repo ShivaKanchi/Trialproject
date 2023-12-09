@@ -43,3 +43,26 @@
   opacity: 1;
   width: 100%;
 }
+
+
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #12051f;
+    --background: #fbf7fd;
+    --primary: #7c2bda;
+    --secondary: #caa8f0;
+    --accent: #611fad;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ede0fa;
+    --background: #060208;
+    --primary: #7725d4;
+    --secondary: #310f57;
+    --accent: #9452e0;
+  }
+}
+
+*/
