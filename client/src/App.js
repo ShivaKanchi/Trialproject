@@ -13,35 +13,28 @@ import FileManger from "./Components/FileManager/FileManger";
 import Animation from "./Components/Animations/Animation";
 import HoverAnimation from "./Components/Animations/HoverAnimation/HoverAnimation";
 import Carousel from "./Components/Carousel/Carousel";
-import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_CLIENT_URL}/check/hello`);
-    console.log("Hello");
   }, []);
 
   return (
     <>
-      <div id="main">
-        <Navbar />
-        <Sidebar />
-
-        <Routes>
-          {/* default */}
-          <Route path="/" element={<Navigate to="/home" />} />
-          {/* Home */}
-          <Route path="/home" element={<Home />} />
-          {/* Components */}
-          <Route path="/form" element={<Register />} />
-          <Route path="/response" element={<Response />} />
-          <Route path="/mappoint" element={<MapGet />} />
-          <Route path="/filemanager" element={<FileManger />} />
-          <Route path="/animation" element={<Animation />} />
-          <Route path="/hoveranimation" element={<HoverAnimation />} />
-          <Route path="/carousel" element={<Carousel />} />
-        </Routes>
-      </div>
+      <Routes>
+        {/* default */}
+        <Route path="/" element={<Navigate to="/home" />} />
+        {/* Home */}
+        <Route path="/home" element={<Home />} />
+        {/* Components */}
+        <Route path="/form" element={<Register />} />
+        <Route path="/response" element={<Response />} />
+        <Route path="/mappoint" element={<MapGet />} />
+        <Route path="/filemanager" element={<FileManger />} />
+        <Route path="/animation" element={<Animation />} />
+        <Route path="/hoveranimation" element={<HoverAnimation />} />
+        <Route path="/carousel" element={<Carousel />} />
+      </Routes>
     </>
   );
 }

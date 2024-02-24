@@ -48,7 +48,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div id="sidebar" className="">
+    <aside id="sidebar" className="">
       <div className="">
         <div
           style={styles}
@@ -69,7 +69,7 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
